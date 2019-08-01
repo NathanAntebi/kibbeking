@@ -1,0 +1,80 @@
+<% include partials/header %>
+
+
+
+
+<div class="main-jumbo" style="background-color: #efefef; padding-top:25px;">
+<div style="margin-top:40px; margin-bottom:25px;" class="container">
+			<div class="row">
+					<div class="col-lg-12 text-center">
+						<div class="filters">
+							<ul class="filter">
+								<li><a href="#" data-filter="*" class="current">All</a></li>
+								<li><a href="#" data-filter=".meat" >Meat</a></li>
+								<li><a href="#" data-filter=".dairy" >Dairy</a></li>
+								<li><a href="#" data-filter=".parve" >Parve</a></li>
+								<li><a href="#" data-filter=".dips" >Dips</a></li>
+								<li><a href="#" data-filter=".frozen" >Frozen foods</a></li>
+							</ul>
+						</div>
+					</div>
+			</div>
+</div>
+
+<div class="items">
+	<div class="container">
+		<div class="row">
+			<%dishes.forEach(function(dish){ %>
+				<div style="margin-bottom:25px;  padding-bottom: 70px; padding-top:15px;" class="<%=dish.type%> col-md-4 col-sm-6">
+					<div class="dish-card" style="border: 1px solid red; padding-bottom: 70px; padding-top:15px; padding-right:15px; padding-left:15px;">
+						<img class="img-thumbnail" alt="<%=dish.name%>" src="<%=dish.image%>"></img>
+						<div style="text-align:center; margin-top:15px;">
+							
+								<span style="color: #8DC63F; font-size:24px; font-weight:400"  class="item-text"><%=dish.description%></span>
+							<div class="item-text">$<span style="font-size:32px;"><%= dish.price %></span>.00/ <%=dish.payper%></div>
+							<div style="margin-top:25px;"><a href="/dishes/<%=dish._id%>"  class="item-text btn-more">View More</a></div>
+						</div>
+					</div>
+								
+				</div>
+			<%})%>
+		</div>
+	</div>
+</div>
+</div>
+
+<div class="what-we-do" id="what-we-do" style="background-color: #cfcfcf; padding-bottom:80px; font-family: 'Raleway', sans-serif;">
+	<div style="margin-bottom: 30px; margin-top:30px;" class="container">
+		<div class="row">
+			<div class="col-lg-12 text-center find-dish1"><h1>What we do</h1></div>
+		</div>
+	</div>
+
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+				<img width:100px; class="icon" style="font-size: 50px; margin-bottom:25px; margin-left:135px;" src="https://image.flaticon.com/icons/svg/1046/1046857.svg" height="55" width="55">
+				<h4 style="margin-left:25px;" class="find-dish1">Cook as you please</h4>
+				<p class="find-dish2">Just ask us which one of our mouth watering mazza you are interested in and you got it!</p>
+			</div>
+			<div class="col-md-4">
+				<img class="icon" style="font-size: 50px; color: red; margin-left:140px;" src="https://image.flaticon.com/icons/svg/411/411763.svg" height="58" width="58">
+				<h4 style="margin-left:75px;" class="find-dish1">Free delivery</h4>
+				<p class="find-dish2">We deliver straight to your home or wherever you please. Mazza without leaving your home? What can possibly be better?</p>
+			</div>
+			<div class="col-md-4">
+				<img class="icon" style="font-size: 50px; color: red; margin-left:150px;" src="https://image.flaticon.com/icons/svg/1046/1046849.svg" height="58" width="58">
+				<h4 class="find-dish1">Cater all occasions</h4>
+				<p class="find-dish2">Have a speial occasion? Don't let that special occassion be mazza-less! We cater to many special occassions. Besides, whats an occasion without mazza?</p>
+			</div>
+			<div class="col-md-4">
+				<img class="icon" style="font-size: 50px; color: red; margin-left:150px;" src="https://image.flaticon.com/icons/svg/263/263062.svg" height="55" width="55">
+				<h4 style="margin-left:100px;" class="find-dish1">Feedback</h4>
+				<p class="find-dish2">We appreciate all feedback! Follow us on instagram and let us know which one is your favorite! @KibbeKing</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<% include partials/footer %>

@@ -1,0 +1,68 @@
+<% include partials/header %>
+
+<a style="margin-bottom:20px; margin-left:20px;" class="btn btn-primary all-dishes" href="/dishes">All dishes</a>
+
+<div class="container" style="margin-bottom:10px;">
+	<div class="row">
+	<div class="col-lg-6">
+         	<img class="show-img" width=565 height=500 src="<%=dish.image%>">
+		</div>
+		<div class="col-lg-6">
+			<ul class="list-group item-text">
+				<li class="list-group-item active item-text">
+					<%=dish.description%>
+				</li>
+
+				<li class="list-group-item item-text">
+					<%=dish.type%>
+				</li>
+
+				<li class="list-group-item item-text">
+					$<%=dish.price%>/<%=dish.payper%>
+				</li>
+			</ul>
+			<a style="margin-top:20px;" href="https://kibbeking123.wufoo.com/forms/m1vyn47k0wuoxrj/" class="btn btn-primary btn-block">Order now</a>			
+		</div>
+		
+	</div>
+</div>
+
+<style>
+.show-img:hover{
+	box-shadow: 0 5px 5px 5px #0069d9;
+	transition: all 0.5s;
+}
+
+.all-dishes{
+	font-size:22px;
+}
+
+.all-dishes:hover{
+	border-top-left-radius:1000px;
+	border-bottom-left-radius: 1000px;
+	border-top-right-radius:35px;
+	border-bottom-right-radius: 35px;
+	color: #0069d9;
+	background-color:#fff;
+	transition: all 0.3s;
+}
+
+.copy-right-section{
+	background-color: #000;
+	color: #fff;
+	padding: 30px 5px;
+}
+
+.copy-right-section p{
+	margin: 0;
+}
+
+.copy-right-section{
+	background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("https://s3.amazonaws.com/files.creativemarket.com/images/screenshots/products/10/106/106399/crsrxfllostehmuxwzqfkdarpcg0di40toehyl4mzmgrkmy3dpfzxttukvsmluvp-o.jpg?1399222059");
+
+}
+
+
+</style>
+
+<% include partials/footer %>
